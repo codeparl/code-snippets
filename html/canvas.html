@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simple HTML5 Canvas Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script>
+        //Access the canvas element when the document has fully loaded into the window and 
+        //draw the moster head by first lsitening to the  DOMContentLoaded  event of the browser window.
+        window.addEventListener("DOMContentLoaded", createMonstorHead);
+
+        var context; //Will hold a reference to the context where the monster head will be filled.
+
+        function createMonstorHead() {
+            //find the canvas element within the document 
+            // and get its context to be used to draw.
+            var canvas = document.querySelector("#canvas1");
+            context = canvas.getContext("2d");
+
+            //calculate values for x and y coords to draw in the center of the canvas 
+            var x = (canvas.getAttribute('width') - 200) / 2;
+            var y = (canvas.getAttribute('height') - 300) / 2;
+            drawMonstorHead(context, x, y);
+
+        }
+
+        function drawMonstorHead(context, x, y) {
+            context.fillStyle = "lightgreen";
+            //draw a rectangle with width=200 and height=300 for the monster head and fill the eyes.
+            context.fillRect(x, y, 200, 300);
+            drawEye(context, 200, x, y);
+            drawEye(context, 200, x, y);
+        }
+
+
+        function drawEye(c, w, x, y) {
+            context.fillStyle = "red"; //red eyes
+            //calculate the positions and size of the eyes and then draw them.
+            context.fillRect(w / 6 + x, (w / 6) + y, 30, 30);
+            context.fillStyle = "yellow"; //yellow pupils
+            context.fillRect(w / 5 + 10 + x, (w / 5) + y, 10, 10);
+
+            context.fillStyle = "red";
+            context.fillRect((w - (w / 3) + x), (w / 6) + y, 30, 30);
+            context.fillStyle = "yellow";
+            context.fillRect((w - (w / 4) + x), (w / 5) + y, 10, 10);
+
+            drawNoseAndMouth(context, 200, 300, x, y);
+        }
+
+        function drawNoseAndMouth(c, w, h, x, y) {
+            context.fillStyle = "black";
+            //calculate the postions and size of the nose and then draw it.
+            context.fillRect(((w / 2) - 10) + x, ((h / 3) - 20) + y, 10, 100);
+
+            //calculate the postions and size of the mouth and then draw it.
+            context.fillStyle = "magenta"; //mouth color
+            context.fillRect((w / 3) - 20 + x, ((h / 2) + 50) + y, 100, 10);
+        }
+    </script>
+
+
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        nav,
+        section,
+        summary {
+            display: block;
+        }
+        
+        audio,
+        canvas,
+        video {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+        }
+        
+        main {
+            margin: auto;
+            width: 100%;
+        }
+        
+        h1,
+        h3 {
+            text-align: center;
+            padding: 10px;
+            margin: auto;
+        }
+        
+        #canvas1 {
+            border: 2px solid gray;
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+            <h1>Simple HTML5 Canvas API Example</h1>
+        </header>
+        <canvas id="canvas1" width="800" height="500"> Your browser does not support canvas.</canvas>
+        <h3>Monster Head</h3>
+    </main>
+
+</body>
+
+</html>
