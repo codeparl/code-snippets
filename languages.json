@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Python",
+    "description": "An easy-to-read, powerful language used for web development, automation, data science, and more.",
+    "path_name": "python"
+  },
+  {
+    "name": "JavaScript",
+    "description": "The language of the web. Use it to create interactive websites, frontend logic, and full-stack applications.",
+    "path_name": "javascript"
+  },
+  {
+    "name": "Java",
+    "description": "A robust, object-oriented language used for Android apps, enterprise software, and cross-platform development.",
+    "path_name": "java"
+  },
+  {
+    "name": "C++",
+    "description": "A high-performance programming language widely used for system software, game engines, and competitive programming.",
+    "path_name": "cpp"
+  },
+  {
+    "name": "PHP",
+    "description": "A server-side scripting language mainly used for web development and building dynamic websites.",
+    "path_name": "php"
+  }
+]

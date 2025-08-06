@@ -27,7 +27,7 @@ public class Prime {
          break; //stop the loop 
     }
     
-  }while(flag != "n");
+  }while(!"n".equals(flag));
 
   input.close();
     }
