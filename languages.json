@@ -2,26 +2,36 @@
   {
     "name": "Python",
     "description": "An easy-to-read, powerful language used for web development, automation, data science, and more.",
-    "path_name": "python"
+    "path_name": "python",
+    "color": "3776AB",
+    "icon": "devicon-python-plain colored"
   },
   {
     "name": "JavaScript",
     "description": "The language of the web. Use it to create interactive websites, frontend logic, and full-stack applications.",
-    "path_name": "javascript"
+    "path_name": "javascript",
+    "color": "F7DF1E",
+    "icon": "devicon-javascript-plain colored"
   },
   {
     "name": "Java",
     "description": "A robust, object-oriented language used for Android apps, enterprise software, and cross-platform development.",
-    "path_name": "java"
+    "path_name": "java",
+    "color": "007396",
+    "icon": "devicon-java-plain colored"
   },
   {
     "name": "C++",
     "description": "A high-performance programming language widely used for system software, game engines, and competitive programming.",
-    "path_name": "cpp"
+    "path_name": "cpp",
+    "color": "00599C",
+    "icon": "devicon-cplusplus-plain colored"
   },
   {
     "name": "PHP",
     "description": "A server-side scripting language mainly used for web development and building dynamic websites.",
-    "path_name": "php"
+    "path_name": "php",
+    "color": "787CB5",
+    "icon": "devicon-php-plain colored"
   }
 ]
